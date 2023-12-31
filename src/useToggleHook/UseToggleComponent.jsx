@@ -3,14 +3,14 @@ import useToggle from './useToggle'
 
 const UseToggleComponent = () => {
 
-  let [toggle , setToggle , trueToggle , falseToggle] = useToggle(true)
+  let [toggle , setToggle] = useToggle(true)
 
   return (
     <>
       <div>{toggle.toString()}</div>
       <button onClick={() => setToggle()}>Toggle</button>
-      <button onClick={() => trueToggle()}>Make it true</button>
-      <button onClick={() => falseToggle()}>Make it false</button>
+      <button onClick={() => setToggle(true)}>Make it true</button>
+      <button onClick={() => setToggle(false)}>Make it false</button>
     </>
   )
 }

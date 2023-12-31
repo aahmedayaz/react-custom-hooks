@@ -4,19 +4,16 @@ const useToggle = (boolean) => {
 
     let [toggle , setToggle] = useState(boolean)
 
-    let HandleToggle = () => {
-        setToggle(prev => !prev)
-    }
+    let HandleToggle = (bool) => {
+        if (bool !== undefined) {
+          setToggle(bool);
+        } else {
+          setToggle(prev => !prev);
+        }
+      };
+      
 
-    let trueToggle = () =>{
-        setToggle(true)
-    }
-
-    let falseToggle = () =>{
-        setToggle(false)
-    }
-
-    return [toggle , HandleToggle , trueToggle , falseToggle]
+    return [toggle , HandleToggle ]
 }
 
 export default useToggle
