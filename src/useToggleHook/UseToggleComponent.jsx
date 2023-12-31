@@ -8,7 +8,7 @@ const UseToggleComponent = () => {
   return (
     <>
       <div>{toggle.toString()}</div>
-      <button onClick={() => setToggle()}>Toggle</button>
+      <button onClick={setToggle}>Toggle</button>
       <button onClick={() => setToggle(true)}>Make it true</button>
       <button onClick={() => setToggle(false)}>Make it false</button>
     </>
